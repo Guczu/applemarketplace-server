@@ -5,7 +5,7 @@ import { pool } from '../database/connection';
 const getAll = async (): Promise<ServiceAPIResponse<User[]>> => {
   try {
     const client = await pool.connect();
-    const result = await client.query('SELECT * FROM marketplace.users');
+    const result = await client.query('SELECT * FROM users');
     const data: User[] = result.rows;
     client.release();
 

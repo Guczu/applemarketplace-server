@@ -1,12 +1,9 @@
 const { Pool } = require('pg');
 import config from "../config/config";
+const connectionString = config.database.url;
 
 const pool = new Pool({
-    user: config.database.user,
-    host: config.database.host,
-    database: config.database.database,
-    password: config.database.password,
-    port: config.database.port
+    connectionString,
 });
 
 export { pool };
