@@ -8,7 +8,8 @@ const config = {
       password: process.env.DB_PASSWORD,
       port: process.env.DB_PORT,
       url: process.env.DATABASE_URL,
-    }
+    },
+    JwtSecret: process.env.JWT_SECRET
 };
   
 export default config;

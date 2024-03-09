@@ -4,8 +4,16 @@ interface User {
     surname: string;
     email: string;
     city: string;
-    login: string;
-    password: string;
+    phone_number: number;
+    rating: number;
+    nickname: string;
+    hashed_password: string;
   }
+
+interface UserData {
+    nickname: string;
+    email: string;
+    password: string;
+}
   
-  export { User }
+  export { User, UserData }
