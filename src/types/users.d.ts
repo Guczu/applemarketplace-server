@@ -11,7 +11,8 @@ interface User {
   }
 
 interface UserData {
-    nickname: string;
+    id: number;
+    nickname?: string;
     email: string;
     password: string;
 }

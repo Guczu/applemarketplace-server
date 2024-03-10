@@ -22,4 +22,14 @@ const createUser = async (req: Request, res: Response) => {
   }
 }
 
-export { getAll, createUser }
+const authUser = async (req: Request, res: Response) => {
+  try {
+    const data = await usersService.authUser(req.body);
+
+    res.status(data.statusCode).send(data.body)
+  } catch (e: any) {
+    res.status(500).send(e.message);
+  }
+}
+
+export { getAll, createUser, authUser }
